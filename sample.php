@@ -1,6 +1,6 @@
 <?php
 
-include "orkiv.inventory.core.php";
+include "inventory.core.php";
 
 $manager = new InvManager(array(
   "id" => "xxx",
