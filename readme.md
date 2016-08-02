@@ -18,7 +18,7 @@ The snippet below initializes the class
 
     <?php
     
-    include "orkiv.inventory.core.php";
+    include "oinventory.core.php";
     
     $manager = new InvManager(array(
       "id" => "accountid",
