@@ -18,7 +18,7 @@ The snippet below initializes the class
 
     <?php
     
-    include "oinventory.core.php";
+    include "inventory.core.php";
     
     $manager = new InvManager(array(
       "id" => "accountid",
