@@ -104,7 +104,7 @@ Example :
 
 ## Category object
 
- ### Properties
+### Properties
 
 - `name` : Name of category.
 - `id`: ID of category.
@@ -112,12 +112,12 @@ Example :
 - `tmp` :   System generated image for that category.
 
 
-#Get inventory Items
+# Get inventory Items
 
 ### InvMaster::items()
  Get all items.
  
- ### Returns
+### Returns
 
 This method returns a  mixed array with key `result`, this key is an array of [item objects](#item-object)
 
