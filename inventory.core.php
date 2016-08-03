@@ -64,6 +64,12 @@ class InvManager
                     $request =  array('open' => $methodName );
                     $request['order'] = $params[0];
             }
+            else if ($methodName == "orders"){
+                    $request =  array('open' => $methodName );
+                  //  print_r($params[0]);
+                    if( is_array( $params[0] ) )
+                    $request['json_query'] = json_encode($params[0]);
+            }
             else { $request =  array('open' => $methodName );
             if(count($params) == 1) 
                 $request['open'] = $params[0];
@@ -77,7 +83,8 @@ class InvManager
         $request['key'] = $this->credentials['key'];
         $request['id'] = $this->credentials['id'];
         //account ID
-        
+      //  echo "Sending";
+       //print_r($request);
         $postdata = http_build_query($request);
 
         $opts = array('http' =>
