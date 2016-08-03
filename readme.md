@@ -34,6 +34,8 @@ You can access all of this information under the settings section of your accoun
 Move the php file `inventory.php` to your website's root. `include` the file wherever functionality is desired!
 
 # Initialization
+
+## new InvMaster(mixed $params[ )
 The snippet below initializes the class
 
     <?php
@@ -66,8 +68,8 @@ This will return a JSON object with key `result`, which is an array of [inventor
 
 ### Properties
 
-`name` : Name of the current category.
-`items` : Array of [Item objects](#item-object).
+- `name` : Name of the current category.
+- `items` : Array of [Item objects](#item-object).
     
 
   
@@ -102,10 +104,10 @@ This method returns a  mixed array with key `result`, this key is an array of [c
 
  ### Properties
 
-`name` : Name of category.
-`id`: ID of category.
-`children`: Array of category objects, with the exception being that `sampleimage` is used as a system generated image for that category.
-`tmp` :   System generated image for that category.
+- `name` : Name of category.
+- `id`: ID of category.
+- `children`: Array of category objects, with the exception being that `sampleimage` is  used as a system generated image for that category.
+- `tmp` :   System generated image for that category.
 
 
 #Get inventory Items
@@ -146,14 +148,15 @@ And Buy is the link to the payment Gateway for that item.
 
 ### Properties 
 
-`category` : Category ID of item.
-`desc` : Richtext description of item.
-`name` : Name of item.
-`ordprice` : Integer value of price.
-`price`: String value of price.
-`quantity` : Item inventory quantity.
-`media` : Array of strings. Each string is a url to an item's image.
-`Buy` : Direct buy link of item.
+- `ID` : ID of item
+- `category` : Category ID of item.
+- `desc` : Richtext description of item.
+- `name` : Name of item.
+- `ordprice` : Integer value of price.
+- `price`: String value of price.
+- `quantity` : Item inventory quantity.
+- `media` : Array of strings. Each string is a url to an item's image.
+- `Buy` : Direct buy link of item.
 
 
 
@@ -206,25 +209,25 @@ This will retrieve all the orders within an account.
 
 ### Properties
 
-`info_email` : Customer email
-`info_first` : Customer first name
-`info_last` : Customer last name
-`phone` :  Customer phone number (U.S. format)
-`shipset`: Customer billing address matches shipping address
-`info_adr1` : Customer billing address line 1
-`info_adr2` : Customer billing address line 2
-`info_cty` : Customer billing city 
-`info_zip` : Customer billing zip
-`state` : Customer billing state
-`info_sadr1` : Customer shipping address line 1
-`info_sadr2` : Customer shipping address line 2
-`info_scty` : Customer shipping city 
-`info_szip` : Customer shipping zip
-`sstate` : Customer shipping state
-`tax_amount`: Float value of tax amount for this order in hundreds. Divide by 100 for USD value
-`shipping_amount`: Float value of shipping total in USD. No conversion needed
-`amount_total` : Float value of total order in USD.
-`order_id` : Unique order ID
+- `info_email` : Customer email
+- `info_first` : Customer first name
+- `info_last` : Customer last name
+- `phone` :  Customer phone number (U.S. format)
+- `shipset`: Customer billing address matches shipping address
+- `info_adr1` : Customer billing address line 1
+- `info_adr2` : Customer billing address line 2
+- `info_cty` : Customer billing city 
+- `info_zip` : Customer billing zip
+- `state` : Customer billing state
+- `info_sadr1` : Customer shipping address line 1
+- `info_sadr2` : Customer shipping address line 2
+- `info_scty` : Customer shipping city 
+- `info_szip` : Customer shipping zip
+- `sstate` : Customer shipping state
+- `tax_amount`: Float value of tax amount for this order in hundreds. Divide by 100 for USD value
+- `shipping_amount`: Float value of shipping total in USD. No conversion needed
+- `amount_total` : Float value of total order in USD.
+- `order_id` : Unique order ID
 
     
 
