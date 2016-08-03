@@ -55,7 +55,7 @@ The snippet below initializes the class
 ### (caching inventory data)
 
 ###  InvMaster::all() 
-Used to download inventory data.
+Used to download all of your inventory data.
 
 #### Returns
 
@@ -68,7 +68,7 @@ This will return a JSON object with key `result`, which is an array of [inventor
 
 ### Properties
 
-- `name` : Name of the current category.
+- `name` : Name of category.
 - `items` : Array of [Item objects](#item-object).
     
 
