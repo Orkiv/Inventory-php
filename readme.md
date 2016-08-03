@@ -91,11 +91,13 @@ The first page is always 0.  The method below is a  DEFAULT call to the api with
 # Get all categories
 
 ## InvMaster::categories() 
-retrieve all categories by calling the method below.
+retrieve all categories.
 
 ### Returns
 
 This method returns a  mixed array with key `result`, this key is an array of [category objects](#category-object)
+
+Example :
 
     <?php
     $someobject = $manager->categories()->result;
@@ -113,8 +115,23 @@ This method returns a  mixed array with key `result`, this key is an array of [c
 #Get inventory Items
 
 ### InvMaster::items()
-#### To get all items
+ Get all items.
+ 
+ ### Returns
+
+This method returns a  mixed array with key `result`, this key is an array of [item objects](#item-object)
+
+ 
 ## InvMaster::item(string $itemid)
+Get a specified item.
+
+### Returns
+
+This method returns the desired [item object](#item-object) within key `result`.
+
+
+Examples :
+
 To simply get all items you can call on the method below, and the method following is used to GET an individual item.
      
          <?php
@@ -125,26 +142,8 @@ To simply get all items you can call on the method below, and the method followi
   
 The script above will output the items retrieved. If you're inventory is of vast amount we recommend using querying instead of this method.
 
-Expected response : 
-
-    stdClass Object ( [approved] => 1423424607
-     [result] => Array 
-    ( [_id] => stdClass Object ( [$id] => 54d28038c9fe6b807f6bc275 ) [name] => Kicker 250.1   [media] => Array ( ) 
-    [buy] => https://orkiv.com/i/buy/?54027800c9fe6b653a7b23c6=54d28038c9fe6b807f6bc275 ) ) )
- 
-- If you noticed the media key of the only item retrieved is empty, this is because no images were uploaded for the item. Here is the data again after giving the item an image via the inventory online portal.
-
-        stdClass Object ( [approved] => 1423424880 
-        Array ( [0] =>
-        stdClass Object ( [_id] => 
-        stdClass Object ( [$id] => 54d28038c9fe6b807f6bc275 ) [name] => Kicker 250.1 [media] => Array ( [0] => https://orkiv.com/i/render.php?54027800c9fe6b653a7b23c6=54d7bd67c9fe6bb4206bc276 ) [buy] => https://orkiv.com/i/buy/?54027800c9fe6b653a7b23c6=54d28038c9fe6b807f6bc275 ) ) )
-
-Now that an image is set you can directly use that as a public link to your items media. 
  
 ##  Item Object
-In each item object, there is a buy and media property.
-Media is an array of https links to that item's images.
-And Buy is the link to the payment Gateway for that item.
 
 ### Properties 
 
