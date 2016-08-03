@@ -8,7 +8,7 @@
 2.  An [Orkiv](https://orkiv.com/i/) Inventory account, with valid API Credentials
 3. We recommend using Twitter Bootstrap for building websites with Inventory.php
 
-Download the PHP file 'inventory.core.php' included in this repo
+[Download](https://github.com/Orkiv/Inventory-php/archive/master.zip) the PHP file 'inventory.core.php' included in this repo
 
 Initialize the class with the following code. Replace `accountid` with your actual account ID and `apikey` with a valid Key generated for your account.
 You can access all of this information under the settings section of your account.
